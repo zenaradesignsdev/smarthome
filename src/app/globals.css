@@ -4,36 +4,46 @@
 
 @layer base {
   :root {
-    /* ─── shadcn/ui tokens (neutral palette) ─── */
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: 240 5.9% 10%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 5.9% 10%;
-    --radius: 0.375rem;
+    /* ─── Smart House — Dark Editorial Palette ─── */
+    --background: 0 0% 7.5%;             /* #131313 */
+    --foreground: 20 7% 89%;             /* #E5E2E1 */
+    --card: 0 0% 12.4%;                  /* #201F1F */
+    --card-foreground: 20 7% 89%;
+    --popover: 0 0% 10.8%;               /* #1C1B1B */
+    --popover-foreground: 20 7% 89%;
+    --primary: 38 100% 84%;              /* #FFE4AF — light gold */
+    --primary-foreground: 44 100% 12%;   /* #3F2E00 — dark on gold */
+    --secondary: 37 61% 69%;             /* #E4C27C */
+    --secondary-foreground: 44 100% 12%;
+    --muted: 0 0% 16.5%;                 /* #2A2A2A */
+    --muted-foreground: 36 30% 75%;      /* #D4C5AB */
+    --accent: 0 0% 16.5%;               /* #2A2A2A */
+    --accent-foreground: 20 7% 89%;
+    --destructive: 354 100% 29%;         /* #93000A */
+    --destructive-foreground: 4 100% 84%;
+    --border: 36 22% 25%;                /* #4F4632 */
+    --input: 0 0% 20.8%;                 /* #353534 */
+    --ring: 45 100% 51%;                 /* #FFC107 — gold focus ring */
+    --radius: 0.125rem;
 
-    /* ─── Per-client brand colours — override these after forking ─── */
-    --brand: 220 70% 35%;
-    --brand-foreground: 0 0% 98%;
-    --brand-muted: 220 30% 92%;
+    /* ─── Brand ─── */
+    --brand: 45 100% 51%;               /* #FFC107 */
+    --brand-foreground: 44 100% 12%;    /* #3F2E00 */
+    --brand-muted: 38 100% 84%;         /* #FFE4AF */
 
-    /* ─── Font CSS variables — injected via html className in layout.tsx ─── */
-    /* --font-sans is set by next/font (Inter by default, swap per client)   */
-    /* --font-display is set per client; falls back to Georgia until then    */
+    /* ─── Surface system ─── */
+    --surface-container-lowest: 0 0% 5.5%;      /* #0E0E0E */
+    --surface-container-low: 0 0% 10.8%;         /* #1C1B1B */
+    --surface-container: 0 0% 12.4%;             /* #201F1F */
+    --surface-container-high: 0 0% 16.5%;        /* #2A2A2A */
+    --surface-container-highest: 0 0% 20.8%;     /* #353534 */
+
+    /* ─── Semantic colour tokens ─── */
+    --on-surface-variant: 36 30% 75%;            /* #D4C5AB */
+    --outline-variant: 36 22% 25%;               /* #4F4632 */
+    --primary-container: 45 100% 51%;            /* #FFC107 — gold CTA */
+    --on-primary-container: 45 100% 21%;         /* #6D5100 */
+    --tertiary-container: 188 100% 50%;          /* #00DEFD */
   }
 
   * {
@@ -48,8 +58,23 @@
     @apply bg-background font-sans text-foreground antialiased;
   }
 
-  /* Consistent focus ring across all interactive elements */
   :focus-visible {
     @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    background: rgba(42, 42, 42, 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  .gold-gradient {
+    background: linear-gradient(135deg, #ffe4af 0%, #ffc107 100%);
+  }
+
+  .text-glow-gold {
+    text-shadow: 0 0 15px rgba(255, 193, 7, 0.3);
   }
 }

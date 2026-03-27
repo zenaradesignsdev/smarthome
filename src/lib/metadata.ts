@@ -6,11 +6,11 @@ import type { Metadata } from 'next'
  * with these site-wide defaults.
  */
 export const siteConfig = {
-  name: 'Client Name', // e.g. "Smith & Associates Law"
-  description: 'Client meta description — 150–160 characters, client-specific.',
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://example.com',
+  name: 'Smart House',
+  description: 'Military-grade smart home security systems for Toronto and the GTA. Custom CCTV, biometric access control, smart locks, and 24/7 monitoring.',
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://smarthouse.to',
   ogImage: '/og-image.jpg',
-  locale: 'en_CA', // e.g. 'en_US', 'en_GB', 'fr_CA'
+  locale: 'en_CA',
 } as const
 
 type MetadataOverrides = {

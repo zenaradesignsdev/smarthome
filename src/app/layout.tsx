@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { fontSans } from '@/lib/fonts'
+import { fontSans, fontHeadline } from '@/lib/fonts'
 import { Providers } from '@/providers/Providers'
 import { generateMetadata } from '@/lib/metadata'
 import '@/app/globals.css'
@@ -10,7 +10,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
-      className={fontSans.variable}
+      className={`${fontSans.variable} ${fontHeadline.variable}`}
     >
       <body>
         <Providers>{children}</Providers>

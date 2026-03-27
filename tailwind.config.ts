@@ -9,12 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        // Swap these CSS variables per client in fonts.ts + globals.css
         sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
         display: ['var(--font-display)', 'Georgia', 'serif'],
+        headline: ['var(--font-headline)', 'Arial Narrow', 'sans-serif'],
       },
       colors: {
-        // shadcn/ui CSS variable tokens — do not remove
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
@@ -48,12 +47,27 @@ const config: Config = {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
-        // Per-client brand colours — add in globals.css as CSS variables
         brand: {
           DEFAULT: 'hsl(var(--brand))',
           foreground: 'hsl(var(--brand-foreground))',
           muted: 'hsl(var(--brand-muted))',
         },
+        // Surface system
+        surface: {
+          DEFAULT: 'hsl(var(--background))',
+          'container-lowest': 'hsl(var(--surface-container-lowest))',
+          'container-low': 'hsl(var(--surface-container-low))',
+          container: 'hsl(var(--surface-container))',
+          'container-high': 'hsl(var(--surface-container-high))',
+          'container-highest': 'hsl(var(--surface-container-highest))',
+        },
+        'on-surface': 'hsl(var(--foreground))',
+        'on-surface-variant': 'hsl(var(--on-surface-variant))',
+        'outline-variant': 'hsl(var(--outline-variant))',
+        'primary-container': 'hsl(var(--primary-container))',
+        'on-primary': 'hsl(var(--primary-foreground))',
+        'on-primary-container': 'hsl(var(--on-primary-container))',
+        'tertiary-container': 'hsl(var(--tertiary-container))',
       },
       borderRadius: {
         lg: 'var(--radius)',

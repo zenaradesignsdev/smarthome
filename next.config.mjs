@@ -39,7 +39,7 @@ const securityHeaders = [
       // unsafe-eval is required for Next.js hot reload in dev; removed in production
       isDev ? "script-src 'self' 'unsafe-eval' 'unsafe-inline'" : "script-src 'self' 'unsafe-inline'",
       "style-src 'self' 'unsafe-inline'",
-      "img-src 'self' blob: data:",
+      "img-src 'self' blob: data: https://lh3.googleusercontent.com https://images.unsplash.com",
       "font-src 'self'",
       "object-src 'none'",
       "base-uri 'self'",
@@ -58,8 +58,10 @@ const nextConfig = {
   },
   images: {
     formats: ['image/avif', 'image/webp'],
-    // Add per-client remote domains here:
-    // remotePatterns: [{ protocol: 'https', hostname: 'example.com' }],
+    remotePatterns: [
+      { protocol: 'https', hostname: 'lh3.googleusercontent.com' },
+      { protocol: 'https', hostname: 'images.unsplash.com' },
+    ],
   },
   async headers() {
     return [
