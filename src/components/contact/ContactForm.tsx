@@ -15,7 +15,6 @@ import {
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
-import { Button } from '@/components/ui/button'
 
 async function submitContactForm(data: ContactFormValues): Promise<void> {
   const response = await fetch('/api/contact', {
@@ -143,9 +142,14 @@ export function ContactForm() {
           )}
         />
 
-        <Button type="submit" disabled={isPending} className="w-full sm:w-auto">
-          {isPending ? 'Sending…' : 'Send message'}
-        </Button>
+        <button
+          type="submit"
+          disabled={isPending}
+          className="relative overflow-hidden gold-gradient text-on-primary font-bold px-8 py-4 rounded-xl text-base font-headline uppercase tracking-wider hover:shadow-[0_0_32px_rgba(255,193,7,0.45)] transition-shadow group disabled:opacity-50 disabled:cursor-not-allowed w-full sm:w-auto"
+        >
+          <span className="relative z-10">{isPending ? 'Sending…' : 'Send Message'}</span>
+          <span className="absolute inset-0 w-1/3 -skew-x-[18deg] bg-white/25 -translate-x-full group-hover:translate-x-[400%] transition-transform duration-700 ease-out" />
+        </button>
       </form>
     </Form>
   )

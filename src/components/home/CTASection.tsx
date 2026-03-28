@@ -22,11 +22,11 @@ export function CTASection() {
               Contact Our Design Team
             </Link>
             <a
-              href="tel:+14165550198"
+              href="tel:+14376063658"
               className="flex items-center gap-3 text-primary-container font-bold px-6 py-4 font-headline uppercase tracking-wide hover:text-primary transition-colors"
             >
               <Phone className="h-5 w-5" />
-              416.555.0198
+              437.606.3658
             </a>
           </div>
         </div>

@@ -11,6 +11,7 @@ export function SiteFooter() {
         {/* Brand */}
         <div className="col-span-2 space-y-6">
           <Link href="/" className="flex items-center gap-3">
+            <img src="/logo.svg" alt="Smart House" className="h-12 w-auto" />
             <span className="text-lg font-bold text-primary uppercase tracking-widest font-headline">
               Smart House
             </span>
@@ -19,17 +20,17 @@ export function SiteFooter() {
             High-performance security engineering for the modern architectural landscape.
             Professional systems, military-grade reliability.
           </p>
-          <div className="flex gap-4">
+          <div className="flex gap-2">
             <a
               href="#"
-              className="text-primary-container hover:text-primary transition-colors"
+              className="p-2.5 text-primary-container hover:text-primary transition-colors"
               aria-label="Website"
             >
               <Globe className="h-5 w-5" />
             </a>
             <a
               href="#"
-              className="text-primary-container hover:text-primary transition-colors"
+              className="p-2.5 text-primary-container hover:text-primary transition-colors"
               aria-label="Share"
             >
               <Share2 className="h-5 w-5" />

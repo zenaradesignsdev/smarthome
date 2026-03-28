@@ -3,6 +3,15 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
   :root {
     /* ─── Smart House — Dark Editorial Palette ─── */
     --background: 0 0% 7.5%;             /* #131313 */
@@ -77,4 +86,18 @@
   .text-glow-gold {
     text-shadow: 0 0 15px rgba(255, 193, 7, 0.3);
   }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 18s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
 }

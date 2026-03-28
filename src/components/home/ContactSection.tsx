@@ -18,8 +18,8 @@ export function ContactSection() {
             design consultants will contact you to schedule a professional site audit.
           </p>
 
-          <div className="space-y-6 pt-4">
-            <a href="tel:+14165550198" className="flex items-center gap-4 group">
+          <address className="not-italic space-y-6 pt-4">
+            <a href="tel:+14376063658" className="flex items-center gap-4 group">
               <div className="w-12 h-12 rounded-xl bg-surface-container-high border border-outline-variant/20 flex items-center justify-center text-primary-container group-hover:gold-gradient group-hover:text-on-primary transition-all duration-300">
                 <Phone className="h-5 w-5" />
               </div>
@@ -27,11 +27,11 @@ export function ContactSection() {
                 <p className="text-xs uppercase tracking-widest font-black text-on-surface-variant">
                   Direct Line
                 </p>
-                <p className="text-xl font-bold font-headline tracking-wide">416.555.0198</p>
+                <p className="text-xl font-bold font-headline tracking-wide">437.606.3658</p>
               </div>
             </a>
 
-            <a href="mailto:hq@smarthouse.to" className="flex items-center gap-4 group">
+            <a href="mailto:smarthousecan@gmail.com" className="flex items-center gap-4 group">
               <div className="w-12 h-12 rounded-xl bg-surface-container-high border border-outline-variant/20 flex items-center justify-center text-primary-container group-hover:gold-gradient group-hover:text-on-primary transition-all duration-300">
                 <Mail className="h-5 w-5" />
               </div>
@@ -39,10 +39,10 @@ export function ContactSection() {
                 <p className="text-xs uppercase tracking-widest font-black text-on-surface-variant">
                   Email
                 </p>
-                <p className="text-xl font-bold font-headline tracking-wide">hq@smarthouse.to</p>
+                <p className="text-xl font-bold font-headline tracking-wide">smarthousecan@gmail.com</p>
               </div>
             </a>
-          </div>
+          </address>
         </div>
 
         {/* Right: form */}
