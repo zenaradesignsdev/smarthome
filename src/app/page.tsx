@@ -11,6 +11,7 @@ import { Testimonials } from '@/components/home/Testimonials'
 import { ContactSection } from '@/components/home/ContactSection'
 import { CTASection } from '@/components/home/CTASection'
 import { SiteFooter } from '@/components/home/SiteFooter'
+import { FloatingCTA } from '@/components/home/FloatingCTA'
 
 export const metadata: Metadata = buildMetadata({
   title: 'Smart Home Security Systems — Toronto & GTA',
@@ -35,6 +36,7 @@ export default function HomePage() {
         <CTASection />
       </main>
       <SiteFooter />
+      <FloatingCTA />
     </>
   )
 }
