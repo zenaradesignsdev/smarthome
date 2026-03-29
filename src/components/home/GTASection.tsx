@@ -30,7 +30,7 @@ export function GTASection() {
             <div className="relative rounded-2xl overflow-hidden border border-outline-variant/20 shadow-2xl aspect-video">
               <Image
                 src={GTA_PHOTO}
-                alt="Ilkhom Khamidov installing an Axis security camera on a residential home"
+                alt="Ilkhom Khamidov installing an Axis security camera on a property"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"

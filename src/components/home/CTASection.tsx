@@ -15,7 +15,7 @@ export function CTASection() {
           </FadeIn>
           <FadeIn delay={0.1}>
             <p className="text-xl text-on-surface-variant max-w-2xl mx-auto">
-              Partner with Smart House during your home&apos;s construction or renovation for
+              Partner with Smart House during your property&apos;s construction or renovation for
               seamless, hidden security integration.
             </p>
           </FadeIn>
@@ -25,7 +25,7 @@ export function CTASection() {
               href="#contact"
               className="gold-gradient text-on-primary font-bold px-10 py-4 rounded-xl text-lg hover:scale-105 hover:shadow-[0_0_20px_rgba(255,193,7,0.4)] transition-all font-headline uppercase tracking-wider"
             >
-              Contact Our Design Team
+              Contact Our Team
             </Link>
             <a
               href="tel:+14376063658"

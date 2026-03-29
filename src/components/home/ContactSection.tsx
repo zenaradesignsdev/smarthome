@@ -15,7 +15,7 @@ export function ContactSection() {
             </span>
           </div>
           <p className="text-lg text-on-surface-variant leading-relaxed max-w-md">
-            Ready to upgrade your home&apos;s intelligence and security? Complete the form and our
+            Ready to upgrade your property&apos;s intelligence and security? Complete the form and our
             design consultants will contact you to schedule a professional site audit.
           </p>
 

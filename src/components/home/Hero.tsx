@@ -9,7 +9,7 @@ const HERO_BG =
 const trust = [
   { value: '200+', label: 'Installations' },
   { value: 'All Brands', label: 'Brand Agnostic' },
-  { value: 'GTA-Based', label: 'Local Team' },
+  { value: 'Homes & Warehouses', label: 'GTA Based' },
 ]
 
 export function Hero() {
@@ -61,21 +61,29 @@ export function Hero() {
               className="block text-6xl md:text-7xl xl:text-8xl text-foreground animate-hero"
               style={{ animationDelay: '0.1s' }}
             >
-              Digital
+              Intelligent
             </span>
             <span
               className="block text-6xl md:text-7xl xl:text-8xl text-foreground animate-hero"
-              style={{ animationDelay: '0.2s' }}
+              style={{ animationDelay: '0.18s' }}
             >
-              Guardians
+              Security
             </span>
             <span
-              className="block text-5xl md:text-6xl xl:text-7xl text-primary-container text-glow-gold mt-1 animate-hero"
-              style={{ animationDelay: '0.3s' }}
+              className="block text-4xl md:text-5xl xl:text-6xl text-primary-container text-glow-gold mt-2 animate-hero"
+              style={{ animationDelay: '0.26s' }}
             >
-              For Modern Living
+              For Every Property
             </span>
           </h1>
+
+          {/* Subheading */}
+          <p
+            className="text-xs font-headline uppercase tracking-[0.3em] text-primary-container animate-hero"
+            style={{ animationDelay: '0.35s' }}
+          >
+            Homes &amp; Warehouses
+          </p>
 
           {/* Body */}
           <p

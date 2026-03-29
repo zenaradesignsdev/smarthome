@@ -85,9 +85,12 @@ export function BrandIndependence() {
 
         {/* ── Three pillars — staggered ── */}
         <FadeInStagger className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-outline-variant/60">
-          {pillars.map(({ number, title, body }) => (
-            <FadeInItem key={number}>
-              <div className="py-8 md:py-0 md:px-10 first:md:pl-0 last:md:pr-0 group">
+          {pillars.map(({ number, title, body }, i) => (
+            <FadeInItem
+              key={number}
+              className={i === 0 ? 'md:pr-12' : i === pillars.length - 1 ? 'md:pl-12' : 'md:px-12'}
+            >
+              <div className="py-8 md:py-0 group">
                 <span className="block text-2xl font-bold font-headline text-primary-container mb-5">
                   {number}
                 </span>

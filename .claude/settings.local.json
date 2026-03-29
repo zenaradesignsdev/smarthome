@@ -29,7 +29,8 @@
       "Bash(curl -s -L --max-time 15 -A \"Mozilla/5.0\" \"https://upload.wikimedia.org/wikipedia/commons/3/3b/Axis_Communications_logo.svg\")",
       "Bash(curl -s -L --max-time 15 -A Mozilla/5.0 https://upload.wikimedia.org/wikipedia/commons/8/84/Dahua_Technology_logo.svg)",
       "Bash(curl:*)",
-      "Bash(git config:*)"
+      "Bash(git config:*)",
+      "Bash(grep:*)"
     ]
   }
 }
