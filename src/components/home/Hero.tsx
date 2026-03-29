@@ -1,8 +1,6 @@
-'use client'
 import Link from 'next/link'
 import { ArrowDown } from 'lucide-react'
 import { Image } from '@/components/ui/image'
-import { m, useReducedMotion } from 'framer-motion'
 
 // Modern luxury home exterior — Unsplash (Scott Webb)
 const HERO_BG =
@@ -15,16 +13,6 @@ const trust = [
 ]
 
 export function Hero() {
-  const reduced = useReducedMotion()
-
-  const ease = [0.22, 1, 0.36, 1] as [number, number, number, number]
-
-  const entry = (delay: number) => ({
-    initial: { opacity: 0, y: reduced ? 0 : 28 },
-    animate: { opacity: 1, y: 0 },
-    transition: reduced ? { duration: 0 } : { duration: 0.65, ease, delay },
-  })
-
   return (
     <section className="relative min-h-screen flex flex-col justify-center px-6 overflow-hidden">
       {/* ── Background layers ── */}
@@ -69,26 +57,41 @@ export function Hero() {
         <div className="space-y-8 max-w-2xl">
           {/* Headline */}
           <h1 className="font-headline font-bold uppercase leading-[0.95] tracking-tight">
-            <m.span className="block text-6xl md:text-7xl xl:text-8xl text-foreground" {...entry(0.1)}>
+            <span
+              className="block text-6xl md:text-7xl xl:text-8xl text-foreground animate-hero"
+              style={{ animationDelay: '0.1s' }}
+            >
               Digital
-            </m.span>
-            <m.span className="block text-6xl md:text-7xl xl:text-8xl text-foreground" {...entry(0.2)}>
+            </span>
+            <span
+              className="block text-6xl md:text-7xl xl:text-8xl text-foreground animate-hero"
+              style={{ animationDelay: '0.2s' }}
+            >
               Guardians
-            </m.span>
-            <m.span className="block text-5xl md:text-6xl xl:text-7xl text-primary-container text-glow-gold mt-1" {...entry(0.3)}>
+            </span>
+            <span
+              className="block text-5xl md:text-6xl xl:text-7xl text-primary-container text-glow-gold mt-1 animate-hero"
+              style={{ animationDelay: '0.3s' }}
+            >
               For Modern Living
-            </m.span>
+            </span>
           </h1>
 
           {/* Body */}
-          <m.p className="text-lg md:text-xl text-on-surface-variant leading-relaxed max-w-xl" {...entry(0.4)}>
+          <p
+            className="text-lg md:text-xl text-on-surface-variant leading-relaxed max-w-xl animate-hero"
+            style={{ animationDelay: '0.4s' }}
+          >
             We design and build custom security &amp; smart home systems — not tied to any brand,
             not pushing inventory. Every solution is engineered around your property, goals, and
             budget.
-          </m.p>
+          </p>
 
           {/* CTAs */}
-          <m.div className="flex flex-wrap gap-4" {...entry(0.5)}>
+          <div
+            className="flex flex-wrap gap-4 animate-hero"
+            style={{ animationDelay: '0.5s' }}
+          >
             <a
               href="tel:+14376063658"
               className="relative overflow-hidden gold-gradient text-on-primary font-bold px-8 py-4 rounded-xl text-base font-headline uppercase tracking-wider hover:shadow-[0_0_32px_rgba(255,193,7,0.45)] transition-shadow group"
@@ -102,10 +105,13 @@ export function Hero() {
             >
               Our Services
             </Link>
-          </m.div>
+          </div>
 
           {/* Trust strip */}
-          <m.div className="flex flex-wrap gap-x-8 gap-y-3 pt-2 border-t border-outline-variant/10" {...entry(0.6)}>
+          <div
+            className="flex flex-wrap gap-x-8 gap-y-3 pt-2 border-t border-outline-variant/10 animate-hero"
+            style={{ animationDelay: '0.6s' }}
+          >
             {trust.map(({ value, label }) => (
               <div key={label} className="flex flex-col">
                 <span className="text-sm font-bold font-headline uppercase tracking-wider text-primary-container">
@@ -116,7 +122,7 @@ export function Hero() {
                 </span>
               </div>
             ))}
-          </m.div>
+          </div>
         </div>
 
       </div>
