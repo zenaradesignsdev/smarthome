@@ -77,10 +77,18 @@ export function SiteFooter() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-outline-variant/10 text-center">
+      <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-outline-variant/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
         <p className="text-on-surface-variant text-sm">
           © {new Date().getFullYear()} Smart House Security. Serving the GTA with Precision.
         </p>
+        <a
+          href="https://www.zenaradesigns.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-on-surface-variant/60 hover:text-primary-container text-xs transition-colors"
+        >
+          Designed by Zenara Designs
+        </a>
       </div>
     </footer>
   )

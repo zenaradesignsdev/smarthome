@@ -1,5 +1,6 @@
 import { CheckCircle } from 'lucide-react'
 import { Image } from '@/components/ui/image'
+import { FadeIn } from '@/components/ui/fade-in'
 
 const GTA_PHOTO = '/security-camera-installation.png'
 
@@ -25,7 +26,7 @@ export function GTASection() {
       <div className="py-24 px-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
           {/* Image */}
-          <div className="w-full md:w-1/2">
+          <FadeIn variant="left" className="w-full md:w-1/2">
             <div className="relative rounded-2xl overflow-hidden border border-outline-variant/20 shadow-2xl aspect-video">
               <Image
                 src={GTA_PHOTO}
@@ -36,10 +37,10 @@ export function GTASection() {
               />
               <div className="absolute inset-0 bg-primary-container/10 mix-blend-overlay" />
             </div>
-          </div>
+          </FadeIn>
 
           {/* Copy */}
-          <div className="w-full md:w-1/2 space-y-6">
+          <FadeIn variant="right" className="w-full md:w-1/2 space-y-6">
             <span className="text-xs text-primary-container uppercase tracking-widest font-black">
               Toronto &amp; GTA
             </span>
@@ -59,7 +60,7 @@ export function GTASection() {
                 </li>
               ))}
             </ul>
-          </div>
+          </FadeIn>
         </div>
       </div>
 

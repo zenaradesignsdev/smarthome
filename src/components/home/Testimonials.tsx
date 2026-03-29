@@ -1,4 +1,5 @@
 import { Star } from 'lucide-react'
+import { FadeIn, FadeInStagger, FadeInItem } from '@/components/ui/fade-in'
 
 const testimonials = [
   {
@@ -25,20 +26,20 @@ export function Testimonials() {
   return (
     <section className="py-24 px-6 bg-background border-y border-outline-variant/5">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <FadeIn className="text-center mb-16">
           <span className="text-xs text-primary uppercase tracking-[0.3em] font-black">
             Client Feedback
           </span>
           <h2 className="text-4xl font-bold font-headline uppercase tracking-tight mt-4">
             Security Proven in the Field
           </h2>
-        </div>
+        </FadeIn>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <FadeInStagger className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map(({ quote, name, location }) => (
+            <FadeInItem key={name}>
             <div
-              key={name}
-              className="bg-surface-container p-8 rounded-2xl border border-outline-variant/10 flex flex-col justify-between"
+              className="bg-surface-container p-8 rounded-2xl border border-outline-variant/10 flex flex-col justify-between h-full"
             >
               <div>
                 <div className="flex gap-1 mb-6">
@@ -62,8 +63,9 @@ export function Testimonials() {
                 </p>
               </div>
             </div>
+            </FadeInItem>
           ))}
-        </div>
+        </FadeInStagger>
       </div>
     </section>
   )

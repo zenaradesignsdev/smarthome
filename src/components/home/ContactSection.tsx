@@ -1,12 +1,13 @@
 import { Phone, Mail } from 'lucide-react'
 import { ContactForm } from '@/components/contact/ContactForm'
+import { FadeIn } from '@/components/ui/fade-in'
 
 export function ContactSection() {
   return (
     <section id="contact" className="py-24 px-6 bg-surface-container-lowest">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
         {/* Left: info */}
-        <div className="space-y-8">
+        <FadeIn variant="left" className="space-y-8">
           <div>
             <span className="text-4xl font-bold font-headline uppercase tracking-tight text-foreground leading-none block">
               Secure Your <br />
@@ -43,15 +44,15 @@ export function ContactSection() {
               </div>
             </a>
           </address>
-        </div>
+        </FadeIn>
 
         {/* Right: form */}
-        <div className="bg-surface-container-low p-8 md:p-10 rounded-2xl border border-outline-variant/10 shadow-2xl relative overflow-hidden">
+        <FadeIn variant="right" className="bg-surface-container-low p-8 md:p-10 rounded-2xl border border-outline-variant/10 shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 right-0 w-32 h-32 bg-primary-container/5 blur-3xl rounded-full" />
           <div className="relative z-10">
             <ContactForm />
           </div>
-        </div>
+        </FadeIn>
       </div>
     </section>
   )

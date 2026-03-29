@@ -1,5 +1,6 @@
 import { Video, Fingerprint, Lock, Bell, Wifi, Volume2 } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
+import { FadeIn, FadeInStagger, FadeInItem } from '@/components/ui/fade-in'
 
 const services: { icon: LucideIcon; title: string; description: string }[] = [
   {
@@ -40,7 +41,7 @@ export function ServicesGrid() {
   return (
     <section id="services" className="py-24 px-6 bg-surface-container-lowest">
       <div className="max-w-7xl mx-auto">
-        <div className="mb-16">
+        <FadeIn className="mb-16">
           <span className="text-xs text-primary uppercase tracking-[0.3em] font-black">
             What We Build
           </span>
@@ -51,25 +52,24 @@ export function ServicesGrid() {
             We cover every layer of a modern security and smart home system — designing, supplying,
             installing, and configuring each component as part of one cohesive solution.
           </p>
-        </div>
+        </FadeIn>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <FadeInStagger className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {services.map(({ icon: Icon, title, description }) => (
-            <div
-              key={title}
-              className="group bg-surface-container-low p-8 rounded-2xl border border-outline-variant/5 hover:border-primary-container/30 transition-all duration-500"
-            >
-              <div className="w-14 h-14 rounded-xl bg-surface-container-high flex items-center justify-center mb-6 transition-all duration-500 group-hover:gold-gradient">
-                <Icon className="h-7 w-7 text-on-surface-variant group-hover:text-on-primary transition-colors duration-500" />
+            <FadeInItem key={title}>
+              <div className="group bg-surface-container-low p-8 rounded-2xl border border-outline-variant/5 hover:border-primary-container/30 transition-all duration-500 h-full">
+                <div className="w-14 h-14 rounded-xl bg-surface-container-high flex items-center justify-center mb-6 transition-all duration-500 group-hover:gold-gradient">
+                  <Icon className="h-7 w-7 text-on-surface-variant group-hover:text-on-primary transition-colors duration-500" />
+                </div>
+                <h3 className="text-xl font-bold mb-3 font-headline uppercase tracking-wide">
+                  {title}
+                </h3>
+                <p className="text-on-surface-variant text-sm leading-relaxed mb-6">{description}</p>
+                <div className="h-1 w-0 group-hover:w-full bg-primary-container transition-all duration-500" />
               </div>
-              <h3 className="text-xl font-bold mb-3 font-headline uppercase tracking-wide">
-                {title}
-              </h3>
-              <p className="text-on-surface-variant text-sm leading-relaxed mb-6">{description}</p>
-              <div className="h-1 w-0 group-hover:w-full bg-primary-container transition-all duration-500" />
-            </div>
+            </FadeInItem>
           ))}
-        </div>
+        </FadeInStagger>
       </div>
     </section>
   )

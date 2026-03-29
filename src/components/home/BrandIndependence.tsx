@@ -1,3 +1,5 @@
+import { FadeIn, FadeInStagger, FadeInItem } from '@/components/ui/fade-in'
+
 const pillars = [
   {
     number: '01',
@@ -49,48 +51,54 @@ export function BrandIndependence() {
       <div className="max-w-7xl mx-auto relative z-10">
 
         {/* ── Top label ── */}
-        <p className="text-[0.65rem] uppercase tracking-[0.35em] text-on-surface-variant/50 font-headline mb-10">
-          Our Philosophy
-        </p>
+        <FadeIn>
+          <p className="text-[0.65rem] uppercase tracking-[0.35em] text-on-surface-variant/50 font-headline mb-10">
+            Our Philosophy
+          </p>
+        </FadeIn>
 
         {/* ── Split manifesto row ── */}
         <div className="grid lg:grid-cols-[1fr_auto] gap-12 items-end border-b border-outline-variant/10 pb-16 mb-16">
 
           {/* Big headline */}
-          <h2 className="font-headline font-bold uppercase leading-[0.9] tracking-tight text-5xl md:text-6xl xl:text-7xl">
-            <span className="block text-foreground">We Don&apos;t</span>
-            <span className="block text-foreground">Sell Brands —</span>
-            <span className="block text-primary-container text-glow-gold">
-              We Build Solutions
-            </span>
-          </h2>
+          <FadeIn delay={0.05}>
+            <h2 className="font-headline font-bold uppercase leading-[0.9] tracking-tight text-5xl md:text-6xl xl:text-7xl">
+              <span className="block text-foreground">We Don&apos;t</span>
+              <span className="block text-foreground">Sell Brands —</span>
+              <span className="block text-primary-container text-glow-gold">We Build Solutions</span>
+            </h2>
+          </FadeIn>
 
-          {/* Pull quote — right side, vertically anchored to baseline */}
-          <blockquote className="lg:max-w-[320px] xl:max-w-[380px]">
-            <p className="text-base md:text-lg text-on-surface-variant leading-relaxed">
-              &ldquo;We don&apos;t sell what&apos;s convenient for us&nbsp;—&nbsp;we build
-              what&apos;s right for you.&rdquo;
-            </p>
-            <p className="mt-4 text-[0.65rem] uppercase tracking-[0.25em] text-on-surface-variant/40 font-headline">
-              — Ilkhom Khamidov
-            </p>
-          </blockquote>
+          {/* Pull quote */}
+          <FadeIn delay={0.35} className="lg:max-w-[320px] xl:max-w-[380px]">
+            <blockquote>
+              <p className="text-base md:text-lg text-on-surface-variant leading-relaxed">
+                &ldquo;We don&apos;t sell what&apos;s convenient for us&nbsp;—&nbsp;we build
+                what&apos;s right for you.&rdquo;
+              </p>
+              <p className="mt-4 text-[0.65rem] uppercase tracking-[0.25em] text-on-surface-variant/40 font-headline">
+                — Ilkhom Khamidov
+              </p>
+            </blockquote>
+          </FadeIn>
         </div>
 
-        {/* ── Three pillars — borderless, numbered ── */}
-        <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-outline-variant/60">
+        {/* ── Three pillars — staggered ── */}
+        <FadeInStagger className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-outline-variant/60">
           {pillars.map(({ number, title, body }) => (
-            <div key={number} className="py-8 md:py-0 md:px-10 first:md:pl-0 last:md:pr-0 group">
-              <span className="block text-2xl font-bold font-headline text-primary-container mb-5">
-                {number}
-              </span>
-              <h3 className="text-lg font-bold font-headline uppercase tracking-wide text-foreground mb-3 group-hover:text-primary-container transition-colors duration-300">
-                {title}
-              </h3>
-              <p className="text-sm text-on-surface-variant leading-relaxed">{body}</p>
-            </div>
+            <FadeInItem key={number}>
+              <div className="py-8 md:py-0 md:px-10 first:md:pl-0 last:md:pr-0 group">
+                <span className="block text-2xl font-bold font-headline text-primary-container mb-5">
+                  {number}
+                </span>
+                <h3 className="text-lg font-bold font-headline uppercase tracking-wide text-foreground mb-3 group-hover:text-primary-container transition-colors duration-300">
+                  {title}
+                </h3>
+                <p className="text-sm text-on-surface-variant leading-relaxed">{body}</p>
+              </div>
+            </FadeInItem>
           ))}
-        </div>
+        </FadeInStagger>
 
       </div>
     </section>

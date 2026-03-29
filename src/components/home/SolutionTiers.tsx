@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Check } from 'lucide-react'
 import { cn } from '@/lib/cn'
+import { FadeIn, FadeInStagger, FadeInItem } from '@/components/ui/fade-in'
 
 const tiers = [
   {
@@ -56,7 +57,7 @@ export function SolutionTiers() {
   return (
     <section id="packages" className="py-24 px-6 bg-background">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16 space-y-4">
+        <FadeIn className="text-center mb-16 space-y-4">
           <span className="text-xs text-primary uppercase tracking-[0.3em] font-black">
             Flexible Packages
           </span>
@@ -67,12 +68,12 @@ export function SolutionTiers() {
             Every tier uses the same design methodology and installation standards. What changes is
             the equipment level — selected to match your budget and requirements, not ours.
           </p>
-        </div>
+        </FadeIn>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+        <FadeInStagger className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
           {tiers.map(({ name, tagline, priceHint, featured, features, cta }) => (
+            <FadeInItem key={name}>
             <div
-              key={name}
               className={cn(
                 'flex flex-col rounded-2xl border p-8 transition-all duration-300',
                 featured
@@ -131,8 +132,9 @@ export function SolutionTiers() {
                 {cta}
               </Link>
             </div>
+            </FadeInItem>
           ))}
-        </div>
+        </FadeInStagger>
 
         <p className="text-center text-xs text-on-surface-variant mt-8 max-w-lg mx-auto">
           All packages include a free site assessment. Final specifications and pricing depend on

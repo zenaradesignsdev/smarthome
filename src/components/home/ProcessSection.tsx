@@ -1,3 +1,5 @@
+import { FadeIn, FadeInStagger, FadeInItem } from '@/components/ui/fade-in'
+
 const steps = [
   {
     number: '01',
@@ -26,7 +28,7 @@ export function ProcessSection() {
   return (
     <section id="process" className="py-24 px-6 bg-background relative overflow-hidden">
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-20">
+        <FadeIn className="text-center mb-20">
           <h2 className="text-4xl font-bold font-headline uppercase tracking-tight mb-4">
             Precision Deployment
           </h2>
@@ -34,26 +36,28 @@ export function ProcessSection() {
             From first consultation to final commissioning, our white-glove process ensures zero
             friction and absolute reliability.
           </p>
-        </div>
+        </FadeIn>
 
-        <div className="grid md:grid-cols-3 gap-12 relative">
+        <FadeInStagger className="grid md:grid-cols-3 gap-12 relative">
           {steps.map(({ number, label, title, description }) => (
-            <div key={title} className="relative text-center md:text-left">
-              <div className="text-[8rem] font-black text-surface-container-high absolute -top-24 left-0 select-none opacity-30 z-0 font-headline">
-                {number}
+            <FadeInItem key={title}>
+              <div className="relative text-center md:text-left">
+                <div className="text-[8rem] font-black text-surface-container-high absolute -top-24 left-0 select-none opacity-30 z-0 font-headline">
+                  {number}
+                </div>
+                <div className="relative z-10">
+                  <h3 className="text-2xl font-bold mb-4 flex items-center gap-4 font-headline uppercase tracking-wide justify-center md:justify-start">
+                    <span className="w-10 h-10 rounded-full border border-primary-container flex items-center justify-center text-primary-container font-mono shrink-0">
+                      {label}
+                    </span>
+                    {title}
+                  </h3>
+                  <p className="text-on-surface-variant leading-relaxed">{description}</p>
+                </div>
               </div>
-              <div className="relative z-10">
-                <h3 className="text-2xl font-bold mb-4 flex items-center gap-4 font-headline uppercase tracking-wide justify-center md:justify-start">
-                  <span className="w-10 h-10 rounded-full border border-primary-container flex items-center justify-center text-primary-container font-mono shrink-0">
-                    {label}
-                  </span>
-                  {title}
-                </h3>
-                <p className="text-on-surface-variant leading-relaxed">{description}</p>
-              </div>
-            </div>
+            </FadeInItem>
           ))}
-        </div>
+        </FadeInStagger>
       </div>
     </section>
   )
