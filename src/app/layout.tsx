@@ -9,7 +9,7 @@ export const metadata: Metadata = generateMetadata()
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'Smart House',
+  name: 'IK Smart Solution',
   description:
     'Independent smart home security integrators serving Toronto and the GTA. Custom CCTV, biometric access control, smart locks, and 24/7 monitoring.',
   url: 'https://smarthouse.to',

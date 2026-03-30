@@ -15,7 +15,7 @@ export function CTASection() {
           </FadeIn>
           <FadeIn delay={0.1}>
             <p className="text-xl text-on-surface-variant max-w-2xl mx-auto">
-              Partner with Smart House during your property&apos;s construction or renovation for
+              Partner with IK Smart Solution during your property&apos;s construction or renovation for
               seamless, hidden security integration.
             </p>
           </FadeIn>

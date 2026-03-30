@@ -81,7 +81,7 @@ export function NavBar() {
         <div className="flex items-center justify-between px-5 py-3">
           {/* Logo */}
           <Link href="/" className="flex items-center shrink-0">
-            <img src="/logo.svg" alt="Smart House" className="h-9 w-auto" />
+            <img src="/logo.svg" alt="IK Smart Solution" className="h-9 w-auto" />
           </Link>
 
           {/* Desktop nav */}

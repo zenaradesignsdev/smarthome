@@ -10,7 +10,7 @@ const testimonials = [
   },
   {
     quote:
-      "I'd been quoted far more by other providers who were clearly just pushing their preferred equipment. Smart House came in, assessed our property, and designed something genuinely tailored to us.",
+      "I'd been quoted far more by other providers who were clearly just pushing their preferred equipment. IK Smart Solution came in, assessed our property, and designed something genuinely tailored to us.",
     name: 'Sarah M.',
     location: 'Bridle Path, Toronto',
   },

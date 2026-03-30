@@ -5,7 +5,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = buildMetadata({
   title: 'Contact Us — Free Security Assessment in Toronto & GTA',
   description:
-    'Book a free on-site security assessment with Smart House. Serving Toronto and the GTA with custom CCTV, access control, and smart home systems. Call 437-606-3658.',
+    'Book a free on-site security assessment with IK Smart Solution. Serving Toronto and the GTA with custom CCTV, access control, and smart home systems. Call 437-606-3658.',
   path: '/contact',
 })
 

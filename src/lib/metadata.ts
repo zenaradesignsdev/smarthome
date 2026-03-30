@@ -6,7 +6,7 @@ import type { Metadata } from 'next'
  * with these site-wide defaults.
  */
 export const siteConfig = {
-  name: 'Smart House',
+  name: 'IK Smart Solution',
   description: 'Military-grade smart home security systems for Toronto and the GTA. Custom CCTV, biometric access control, smart locks, and 24/7 local monitoring. Brand-agnostic, fully bespoke.',
   url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://smarthouse.to',
   ogImage: '/og-image.jpg',

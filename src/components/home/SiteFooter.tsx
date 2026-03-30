@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { Globe, Share2 } from 'lucide-react'
 
 const solutions = ['CCTV', 'Access Control', 'Smart Locks', 'Alarm Systems']
-const company = ['Wi-Fi Networks', 'Audio Systems', 'Contact Us', 'Privacy Policy']
+const company = ['Contact Us']
 
 export function SiteFooter() {
   return (
@@ -11,9 +11,9 @@ export function SiteFooter() {
         {/* Brand */}
         <div className="col-span-2 space-y-6">
           <Link href="/" className="flex items-center gap-3">
-            <img src="/logo.svg" alt="Smart House" className="h-12 w-auto" />
+            <img src="/logo.svg" alt="IK Smart Solution" className="h-12 w-auto" />
             <span className="text-lg font-bold text-primary uppercase tracking-widest font-headline">
-              Smart House
+              IK Smart Solution
             </span>
           </Link>
           <p className="text-on-surface-variant text-sm leading-relaxed max-w-sm">
@@ -47,7 +47,7 @@ export function SiteFooter() {
             {solutions.map((item) => (
               <li key={item}>
                 <Link
-                  href="#services"
+                  href="#solutions"
                   className="text-on-surface-variant hover:text-primary transition-colors text-sm"
                 >
                   {item}
@@ -79,7 +79,7 @@ export function SiteFooter() {
 
       <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-outline-variant/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
         <p className="text-on-surface-variant text-sm">
-          © {new Date().getFullYear()} Smart House Security. Serving the GTA with Precision.
+          © {new Date().getFullYear()} IK Smart Solution Security. Serving the GTA with Precision.
         </p>
         <a
           href="https://www.zenaradesigns.com"

@@ -14,7 +14,7 @@ import { SiteFooter } from '@/components/home/SiteFooter'
 import { FloatingCTA } from '@/components/home/FloatingCTA'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Smart Home Security Systems — Toronto & GTA',
+  title: 'IK Smart Solution — Security Systems Toronto & GTA',
   description:
     "Military-grade smart home security for Toronto's most discerning residents. Custom CCTV, biometric access control, smart locks & 24/7 local monitoring.",
   path: '/',
