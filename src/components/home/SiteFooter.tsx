@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { Globe, Share2 } from 'lucide-react'
 
 const solutions = ['CCTV', 'Access Control', 'Smart Locks', 'Alarm Systems']
 const company = ['Contact Us']
@@ -20,22 +19,20 @@ export function SiteFooter() {
             High-performance security engineering for the modern architectural landscape.
             Professional systems, military-grade reliability.
           </p>
-          <div className="flex gap-2">
-            <a
-              href="#"
-              className="p-2.5 text-primary-container hover:text-primary transition-colors"
-              aria-label="Website"
-            >
-              <Globe className="h-5 w-5" />
-            </a>
-            <a
-              href="#"
-              className="p-2.5 text-primary-container hover:text-primary transition-colors"
-              aria-label="Share"
-            >
-              <Share2 className="h-5 w-5" />
-            </a>
-          </div>
+          <a
+            href="https://ca.nextdoor.com/pages/smart-house/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="IK Smart Solution on Nextdoor"
+            className="inline-block transition-opacity duration-200 hover:opacity-70"
+          >
+            <img
+              src="/logo-nextdoor.png"
+              alt="Nextdoor"
+              className="h-7 w-auto"
+              style={{ filter: 'brightness(0) saturate(100%) invert(84%) sepia(50%) saturate(800%) hue-rotate(357deg) brightness(105%)' }}
+            />
+          </a>
         </div>
 
         {/* Solutions */}
