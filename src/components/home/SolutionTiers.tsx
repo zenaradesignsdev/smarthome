@@ -6,48 +6,45 @@ import { FadeIn, FadeInStagger, FadeInItem } from '@/components/ui/fade-in'
 const tiers = [
   {
     name: 'Essential',
-    tagline: 'Reliable protection, lean budget',
+    tagline: 'Core protection for smaller properties',
     priceHint: 'Entry level',
     featured: false,
     features: [
-      'HD IP cameras (2–4 units)',
-      'Network video recorder (NVR)',
+      'IP security cameras',
+      'Smart lock',
+      'Alarm system',
       'Remote viewing via mobile app',
-      'Single-zone alarm system',
-      'Basic smart lock integration',
-      'Professional installation',
+      'Professional installation & full setup',
     ],
     cta: 'Get a Quote',
   },
   {
     name: 'Standard',
-    tagline: 'Complete coverage, smart control',
+    tagline: 'Expanded coverage, smarter control',
     priceHint: 'Most popular',
     featured: true,
     features: [
-      '4K cameras — multi-zone coverage',
-      'AI motion detection & alerts',
-      'Access control with guest codes',
-      'Multi-zone alarm with cellular backup',
-      'Integrated smart locks & intercoms',
-      'Managed Wi-Fi for all devices',
-      'Professional installation & configuration',
+      'IP security cameras — extended coverage',
+      'Smart locks',
+      'Multi-zone alarm system',
+      'Remote viewing & motion alerts',
+      'Guest access codes & remote control',
+      'Professional installation & full setup',
     ],
     cta: 'Get a Quote',
   },
   {
     name: 'Premium',
-    tagline: 'Enterprise-grade, fully bespoke',
-    priceHint: 'Full capability',
+    tagline: 'Full-property coverage, inside & out',
+    priceHint: 'Full coverage',
     featured: false,
     features: [
-      'Commercial-grade 4K / thermal cameras',
-      'Biometric & facial recognition access',
-      'Redundant alarm with 24/7 monitoring',
-      'Full smart home integration',
-      'Enterprise mesh Wi-Fi infrastructure',
-      'Whole-home audio & AV systems',
-      'Dedicated project manager & ongoing SLA',
+      'IP security cameras — full perimeter',
+      'Smart locks on all entry points',
+      'Multi-zone alarm with 24/7 monitoring',
+      'Cloud backup & remote access',
+      'Advanced motion detection & alerts',
+      'Professional installation & full setup',
     ],
     cta: 'Get a Quote',
   },
@@ -59,14 +56,13 @@ export function SolutionTiers() {
       <div className="max-w-7xl mx-auto">
         <FadeIn className="text-center mb-16 space-y-4">
           <span className="text-xs text-primary uppercase tracking-[0.3em] font-black">
-            Flexible Packages
+            Service Packages
           </span>
           <h2 className="text-4xl font-bold font-headline uppercase tracking-tight">
-            A System for Every Budget
+            Same Service. Every Package.
           </h2>
           <p className="text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
-            Every tier uses the same design methodology and installation standards. What changes is
-            the equipment level — selected to match your budget and requirements, not ours.
+            Every package comes with the same professional installation, configuration, and support — what changes is the hardware bundle. Choose the coverage that fits your property.
           </p>
         </FadeIn>
 
@@ -137,8 +133,7 @@ export function SolutionTiers() {
         </FadeInStagger>
 
         <p className="text-center text-xs text-on-surface-variant mt-8 max-w-lg mx-auto">
-          All packages include a free site assessment. Final specifications and pricing depend on
-          your property size, layout, and chosen equipment tier.
+          All packages include a free site assessment. Camera placement, lock compatibility, and alarm zones are confirmed on-site before any work begins.
         </p>
       </div>
     </section>

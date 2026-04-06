@@ -1,8 +1,15 @@
-import { CheckCircle } from 'lucide-react'
-import { Image } from '@/components/ui/image'
+import { CheckCircle, Video, Fingerprint, Lock, Bell, Wifi, Volume2 } from 'lucide-react'
+import type { LucideIcon } from 'lucide-react'
 import { FadeIn } from '@/components/ui/fade-in'
 
-const GTA_PHOTO = '/security-camera-installation.png'
+const serviceIcons: { icon: LucideIcon; label: string }[] = [
+  { icon: Video, label: 'Video Surveillance' },
+  { icon: Fingerprint, label: 'Access Control' },
+  { icon: Lock, label: 'Smart Locks' },
+  { icon: Bell, label: 'Alarm Systems' },
+  { icon: Wifi, label: 'Wi-Fi Networks' },
+  { icon: Volume2, label: 'Audio Systems' },
+]
 
 const features = [
   'No manufacturer contracts — we source what performs best for your project.',
@@ -25,17 +32,60 @@ export function GTASection() {
     <section id="solutions" className="bg-surface-container-low overflow-hidden">
       <div className="py-24 px-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
-          {/* Image */}
+          {/* Service icons grid */}
           <FadeIn variant="left" className="w-full md:w-1/2">
-            <div className="relative rounded-2xl overflow-hidden border border-outline-variant/20 shadow-2xl aspect-video">
-              <Image
-                src={GTA_PHOTO}
-                alt="Ilkhom Khamidov installing an Axis security camera on a property"
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover"
+            <div
+              className="relative p-6 rounded-3xl"
+              style={{
+                background: 'rgba(255,255,255,0.02)',
+                backgroundImage: `
+                  linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px),
+                  linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px)
+                `,
+                backgroundSize: '40px 40px',
+              }}
+            >
+              {/* Radial gold glow behind grid */}
+              <div
+                className="absolute inset-0 rounded-3xl pointer-events-none"
+                style={{
+                  background: 'radial-gradient(ellipse at 50% 50%, rgba(212,175,55,0.07) 0%, transparent 70%)',
+                }}
               />
-              <div className="absolute inset-0 bg-primary-container/10 mix-blend-overlay" />
+              <div className="relative grid grid-cols-3 gap-3">
+                {serviceIcons.map(({ icon: Icon, label }) => (
+                  <div
+                    key={label}
+                    className="group relative flex flex-col items-center gap-3 p-5 cursor-default overflow-visible"
+                    style={{ isolation: 'isolate' }}
+                  >
+                    {/* Card bg */}
+                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-white/[0.04] to-white/[0.01] border border-white/5 group-hover:border-primary-container/30 transition-colors duration-300" />
+
+                    {/* Corner brackets on hover */}
+                    <div className="pointer-events-none absolute inset-0 hidden group-hover:block">
+                      <div className="absolute -left-px -top-px h-3 w-3 border-l-2 border-t-2 border-primary-container rounded-tl-sm" />
+                      <div className="absolute -right-px -top-px h-3 w-3 border-r-2 border-t-2 border-primary-container rounded-tr-sm" />
+                      <div className="absolute -left-px -bottom-px h-3 w-3 border-l-2 border-b-2 border-primary-container rounded-bl-sm" />
+                      <div className="absolute -right-px -bottom-px h-3 w-3 border-r-2 border-b-2 border-primary-container rounded-br-sm" />
+                    </div>
+
+                    {/* Icon */}
+                    <div className="relative z-10 w-12 h-12 rounded-xl flex items-center justify-center bg-white/5 group-hover:bg-primary-container/10 transition-all duration-300">
+                      {/* icon glow */}
+                      <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                        style={{ boxShadow: '0 0 18px 4px rgba(212,175,55,0.25)' }}
+                      />
+                      <Icon className="relative z-10 h-5 w-5 text-on-surface-variant group-hover:text-primary-container transition-colors duration-300" />
+                    </div>
+
+                    {/* Label */}
+                    <span className="relative z-10 text-[10px] font-bold uppercase tracking-widest text-center leading-tight text-on-surface-variant/60 group-hover:text-primary-container transition-colors duration-300">
+                      {label}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
           </FadeIn>
 
